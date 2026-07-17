@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "optionclub",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "optionclub",
+          "database_id": "aa436adb-3b46-416b-acde-515fd62e0df8"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "94575a5094bf4cf2aed7a7fc03d13cb1",
+            "binding": "SECRET",
+            "secret_name": "zetaoclub"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
